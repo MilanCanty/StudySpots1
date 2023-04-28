@@ -13,7 +13,7 @@ struct RoomsView: View {
     @FirestoreQuery (collectionPath: "rooms") var rooms: [Room]
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var RoomVM: RoomViewModel
-    @State private var sheetIsPresented = false
+    @State private var presentSheet = false
     
     var body: some View {
         NavigationStack {
@@ -45,20 +45,23 @@ struct RoomsView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button {
-                        sheetIsPresented.toggle()
+                        presentSheet.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
             }
-        }
-    }
-}
-    
-    struct RoomsView_Previews: PreviewProvider {
-        static var previews: some View {
-            NavigationStack {
-                RoomsView()
+            .fullScreenCover(isPresented: $presentSheet) {
+                DetailView(room:Room())
             }
         }
     }
+}
+
+struct RoomsView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            DetailView(room: Room(number:"245"))
+        }
+    }
+}

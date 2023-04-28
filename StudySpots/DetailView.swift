@@ -13,7 +13,7 @@ struct DetailView: View {
     @Environment (\.dismiss) private var dismiss
     
     var body: some View {
-        VStack(alignment: .leading) {
+        NavigationStack(alignment: .leading) {
             Group {
                 Text("Room Number:")
                     .bold()
@@ -55,6 +55,7 @@ struct DetailView: View {
         }
         .font(.title2)
         .padding()
+        .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem (placement:.navigationBarLeading){
                 Button("Cancel"){

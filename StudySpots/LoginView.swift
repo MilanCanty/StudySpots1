@@ -95,7 +95,7 @@ struct LoginView: View {
             }
         }
         .fullScreenCover(isPresented: $presentSheet) {
-            SpotsView()
+            RoomsView()
         }//TODO:add new view for this)
     }
     func enableButtons(){
