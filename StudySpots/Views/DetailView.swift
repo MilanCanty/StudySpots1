@@ -9,16 +9,22 @@ import SwiftUI
 
 struct DetailView: View {
     @EnvironmentObject var RoomVM: RoomViewModel
-    @State var building: Building
+//    @State var building: Building
     @State var room: Room
     @Environment (\.dismiss) private var dismiss
     
     var body: some View {
         VStack(alignment: .leading) {
             Group {
-                Text (building.name)
+                Text ("Building Name")
                     .bold()
                     .font(.title)
+                Picker("", selection: $room.buildingName) {
+                    ForEach(BuildingName.allCases, id: \.self) { buildingName in
+                        Text(buildingName.rawValue.capitalized)
+                            .tag(buildingName.rawValue)
+                    }
+                }
                 
                 Text("Room Number:")
                     .bold()
@@ -58,7 +64,7 @@ struct DetailView: View {
             ToolbarItem (placement:.navigationBarTrailing){
                 Button("Save"){
                     Task {
-                        let id = await RoomVM.saveRoom(building:building, room: room)
+                        let id = await RoomVM.saveRoom(room: room)
                         if id != nil {
                             dismiss()
                         } else {
@@ -74,7 +80,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            DetailView(building: Building(name: "Gasson"),room: Room())
+            DetailView(room: Room(number: "245"))
                 .environmentObject(RoomViewModel())
         }
     }
