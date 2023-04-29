@@ -41,7 +41,7 @@ struct DetailView: View {
                 
                 Text("Study Time slot:")
                     .bold()
-                TextField("time", text:$room.time)
+                DatePicker("time", text:$room.time)
                     .textFieldStyle(.roundedBorder)
                     .padding(.bottom)
                 
@@ -73,6 +73,9 @@ struct DetailView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            print("I got to my detail view!")
         }
     }
 }

@@ -18,12 +18,12 @@ struct Room: Codable, Identifiable {
     @DocumentID var id: String?
     var number = ""
     var courseName = ""
-    var time = "" //make a time picker
+    var time = Date.now + (60*60*24) //make a time picker
     var description = ""
     var buildingName = BuildingName.Gasson.rawValue
     
     
     var dictionary: [String: Any] {
-        return ["number": number, "CourseName":courseName, "time":time,"description": description, "buildingName":buildingName]
+        return ["number": number, "courseName":courseName, "time":time,"description": description, "buildingName":buildingName]
     }
 }
