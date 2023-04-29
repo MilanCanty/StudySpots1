@@ -61,7 +61,7 @@ struct LoginView: View {
             }
             .textFieldStyle(.roundedBorder)
             .overlay{
-               RoundedRectangle(cornerRadius: 5)
+                RoundedRectangle(cornerRadius: 5)
                     .stroke(.gray.opacity(0.5), lineWidth: 2)
             }
             .padding(.horizontal)
@@ -73,7 +73,7 @@ struct LoginView: View {
                 }
                 .padding()
                 Button {
-                   login()
+                    login()
                 } label: {
                     Text("Log In")
                 }
@@ -81,6 +81,7 @@ struct LoginView: View {
             }
             .disabled(buttonDisabled)
             .buttonStyle(.borderedProminent)
+            .tint(.gray)
             .font(.title2)
             .padding(.top)
         }
@@ -95,8 +96,8 @@ struct LoginView: View {
             }
         }
         .fullScreenCover(isPresented: $presentSheet) {
-            RoomsView()
-        }//TODO:add new view for this)
+            BuildingView()
+        }
     }
     func enableButtons(){
         let emailIsGood = email.count >= 6 && email.contains("@")

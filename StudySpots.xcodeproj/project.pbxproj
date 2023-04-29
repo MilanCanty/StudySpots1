@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1455F7D29FCA91F00E1EB59 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1455F7C29FCA91F00E1EB59 /* Building.swift */; };
+		F1455F7F29FCABCC00E1EB59 /* BuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1455F7E29FCABCC00E1EB59 /* BuildingViewModel.swift */; };
+		F175142B29FD68F400776A33 /* BuildingRoomRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175142A29FD68F400776A33 /* BuildingRoomRowView.swift */; };
 		F179BE3E29FB0ED700559B1B /* RoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F179BE3D29FB0ED700559B1B /* RoomsView.swift */; };
 		F179BE4029FB1BFD00559B1B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F179BE3F29FB1BFD00559B1B /* Room.swift */; };
 		F179BE4229FB1C6E00559B1B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F179BE4129FB1C6E00559B1B /* DetailView.swift */; };
 		F1AE0A3E29FB388F002BCCEC /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE0A3D29FB388F002BCCEC /* RoomViewModel.swift */; };
-		F1E612A829F987CB0063ADD0 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E612A729F987CB0063ADD0 /* SpotsView.swift */; };
+		F1E612A829F987CB0063ADD0 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E612A729F987CB0063ADD0 /* BuildingView.swift */; };
 		F1F12CB429F458EE0067B241 /* StudySpotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F12CB329F458EE0067B241 /* StudySpotsApp.swift */; };
 		F1F12CB629F458EE0067B241 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F12CB529F458EE0067B241 /* LoginView.swift */; };
 		F1F12CB829F458F30067B241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F12CB729F458F30067B241 /* Assets.xcassets */; };
@@ -24,11 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1455F7C29FCA91F00E1EB59 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		F1455F7E29FCABCC00E1EB59 /* BuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewModel.swift; sourceTree = "<group>"; };
+		F175142A29FD68F400776A33 /* BuildingRoomRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingRoomRowView.swift; sourceTree = "<group>"; };
 		F179BE3D29FB0ED700559B1B /* RoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsView.swift; sourceTree = "<group>"; };
 		F179BE3F29FB1BFD00559B1B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		F179BE4129FB1C6E00559B1B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F181FB0729FC80C400CD56C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F1AE0A3D29FB388F002BCCEC /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
-		F1E612A729F987CB0063ADD0 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsView.swift; sourceTree = "<group>"; };
+		F1E612A729F987CB0063ADD0 /* BuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
 		F1F12CB029F458EE0067B241 /* StudySpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudySpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F12CB329F458EE0067B241 /* StudySpotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySpotsApp.swift; sourceTree = "<group>"; };
 		F1F12CB529F458EE0067B241 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -52,6 +59,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1455F8129FCAC0F00E1EB59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F179BE3F29FB1BFD00559B1B /* Room.swift */,
+				F1455F7C29FCA91F00E1EB59 /* Building.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1455F8229FCAC2900E1EB59 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1AE0A3D29FB388F002BCCEC /* RoomViewModel.swift */,
+				F1455F7E29FCABCC00E1EB59 /* BuildingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F1455F8329FCAC4000E1EB59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1F12CB529F458EE0067B241 /* LoginView.swift */,
+				F1E612A729F987CB0063ADD0 /* BuildingView.swift */,
+				F179BE3D29FB0ED700559B1B /* RoomsView.swift */,
+				F179BE4129FB1C6E00559B1B /* DetailView.swift */,
+				F175142A29FD68F400776A33 /* BuildingRoomRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F1F12CA729F458EE0067B241 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +108,11 @@
 		F1F12CB229F458EE0067B241 /* StudySpots */ = {
 			isa = PBXGroup;
 			children = (
+				F181FB0729FC80C400CD56C7 /* Info.plist */,
 				F1F12CB329F458EE0067B241 /* StudySpotsApp.swift */,
-				F179BE3F29FB1BFD00559B1B /* Room.swift */,
-				F1AE0A3D29FB388F002BCCEC /* RoomViewModel.swift */,
-				F1F12CB529F458EE0067B241 /* LoginView.swift */,
-				F1E612A729F987CB0063ADD0 /* SpotsView.swift */,
-				F179BE3D29FB0ED700559B1B /* RoomsView.swift */,
-				F179BE4129FB1C6E00559B1B /* DetailView.swift */,
+				F1455F8129FCAC0F00E1EB59 /* Models */,
+				F1455F8229FCAC2900E1EB59 /* ViewModels */,
+				F1455F8329FCAC4000E1EB59 /* Views */,
 				F1F12CB729F458F30067B241 /* Assets.xcassets */,
 				F1F5F2EC29F45F75008429CD /* GoogleService-Info.plist */,
 				F1F12CB929F458F30067B241 /* Preview Content */,
@@ -175,11 +210,14 @@
 			files = (
 				F179BE3E29FB0ED700559B1B /* RoomsView.swift in Sources */,
 				F179BE4229FB1C6E00559B1B /* DetailView.swift in Sources */,
+				F1455F7F29FCABCC00E1EB59 /* BuildingViewModel.swift in Sources */,
 				F1F12CB629F458EE0067B241 /* LoginView.swift in Sources */,
 				F179BE4029FB1BFD00559B1B /* Room.swift in Sources */,
-				F1E612A829F987CB0063ADD0 /* SpotsView.swift in Sources */,
+				F1E612A829F987CB0063ADD0 /* BuildingView.swift in Sources */,
+				F175142B29FD68F400776A33 /* BuildingRoomRowView.swift in Sources */,
 				F1AE0A3E29FB388F002BCCEC /* RoomViewModel.swift in Sources */,
 				F1F12CB429F458EE0067B241 /* StudySpotsApp.swift in Sources */,
+				F1455F7D29FCA91F00E1EB59 /* Building.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +349,9 @@
 				DEVELOPMENT_TEAM = SF57DLQMYH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudySpots/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,9 +378,9 @@
 				DEVELOPMENT_TEAM = SF57DLQMYH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudySpots/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
