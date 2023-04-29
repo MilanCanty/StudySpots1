@@ -25,7 +25,6 @@ struct DetailView: View {
                             .tag(buildingName.rawValue)
                     }
                 }
-                
                 Text("Room Number:")
                     .bold()
                 TextField("room number", text:$room.number)
@@ -41,7 +40,7 @@ struct DetailView: View {
                 
                 Text("Study Time slot:")
                     .bold()
-                DatePicker("time", text:$room.time)
+                TextField("time", text:$room.time)
                     .textFieldStyle(.roundedBorder)
                     .padding(.bottom)
                 

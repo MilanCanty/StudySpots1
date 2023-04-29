@@ -39,6 +39,7 @@ struct RoomsView: View {
                     NavigationLink {
                         DetailView(room: room)
                     } label: {
+                        Image("image-1")
                         Text(room.courseName)
                     }
                 }

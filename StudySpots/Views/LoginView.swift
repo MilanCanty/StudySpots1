@@ -33,7 +33,7 @@ struct LoginView: View {
                 .frame(width: 270, height: 270)
                 .fontWeight(.light)
                 .padding()
-                .foregroundColor(.blue)
+                .foregroundColor(.black)
             
             Group {
                 TextField("E-mail", text: $email )

@@ -18,7 +18,7 @@ struct Room: Codable, Identifiable {
     @DocumentID var id: String?
     var number = ""
     var courseName = ""
-    var time = Date.now + (60*60*24) //make a time picker
+    var time = "" //make a time picker
     var description = ""
     var buildingName = BuildingName.Gasson.rawValue
     
